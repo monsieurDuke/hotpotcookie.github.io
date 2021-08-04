@@ -3,6 +3,8 @@ package handler
 import (
     "log"
     "net/http"
+    "path"
+    "html/template"
 )
 var url string = "http://localhost:8080"
 
@@ -13,8 +15,14 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
         log.Println("[gfarms]: req HTTP/404 "+url+r.URL.Path,r.RemoteAddr)
         return
     }
-    w.Write([]byte("Home Page"))
-    log.Println("[gfarms]: req HTTP/1.1 "+url+"/",r.RemoteAddr)
+//    w.Write([]byte("Home Page"))
+    tmp,err := template.ParseFiles(path.Join("pages","index.html"))
+    if err != nil {
+        http.Error(w, err.Error(), http.StatusInternalServerError)
+        return        
+    }
+    tmp.Execute(w,nil)
+    log.Println("[gfarms]: req HTTP/1.1 "+url+"/",r.RemoteAddr) // bikin log kalo error
 }
 func DboardPage(w http.ResponseWriter, r *http.Request) {
     w.Write([]byte("Dashboard Page"))
