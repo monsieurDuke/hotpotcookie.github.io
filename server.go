@@ -1,41 +1,18 @@
 package main
 
 import (
-    "fmt"
-    //"log"
+    "log"
     "net/http"
+    "growfarms/handler"
 )
-// MAIN METHOD
-func main() {
-    fmt.Println("[grow-farms]: serving website in :8080")	
-    http.HandleFunc("/", homeHandler)
-    http.HandleFunc("/contact", contactHandler)    
-    http.ListenAndServe(":8080", nil)
-}
-
-// PAGE HANDLER
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-    if r.URL.Path != "/" {
-        errorHandler(w, r, http.StatusNotFound)
-        return
-    }
-    fmt.Fprint(w, "SERVING HELLO")
-    fmt.Println("[grow-farms]: responding",r.URL.Path,"(HTTP/1.1)")    
-}
-func contactHandler(w http.ResponseWriter, r *http.Request) {
-    if r.URL.Path != "/contact" {
-        errorHandler(w, r, http.StatusNotFound)
-        return
-    }
-    fmt.Fprint(w, "SERVING HELLO")
-    fmt.Println("[grow-farms]: responding",r.URL.Path,"(HTTP/1.1)")    
-}
-
-// ERROR HANDLER
-func errorHandler(w http.ResponseWriter, r *http.Request, status int) {
-    w.WriteHeader(status)
-    if status == http.StatusNotFound {
-        fmt.Fprint(w, "SERVING ERROR 404")
-	    fmt.Println("[grow-farms]: responding",r.URL.Path,"(HTTP/404)")
-    }
+// main function
+func main() {    
+    url := "http://localhost:8080"    
+    mux := http.NewServeMux()    
+    log.Println("[gfarms]: starting server on",url)
+    //    
+    mux.HandleFunc("/",handler.HomePage)    
+    mux.HandleFunc("/dashboard",handler.DboardPage)    
+    err := http.ListenAndServe(":8080",mux)
+    log.Fatal(err)
 }
