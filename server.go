@@ -3,7 +3,7 @@ package main
 import (
     "log"
     "net/http"
-    "cookie/handler"
+    "cookie/source/golang"
 )
 // main function
 func main() {    
@@ -11,8 +11,11 @@ func main() {
     mux := http.NewServeMux()    
     log.Println("[gfarms]: starting server on",url)
     //    
-    mux.HandleFunc("/",handler.HomePage)    
-    mux.HandleFunc("/dashboard",handler.DboardPage)    
+    mux.HandleFunc("/",golang.HomePage)    
+    mux.HandleFunc("/dashboard",golang.DboardPage)    
+    //
+    mux.Handle("/source/css/", http.StripPrefix("/source/css/", http.FileServer(http.Dir("source/css"))))
+    mux.Handle("/source/js/", http.StripPrefix("/source/js/", http.FileServer(http.Dir("source/js"))))    
     err := http.ListenAndServe(":8080",mux)
     log.Fatal(err)
 }

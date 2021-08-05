@@ -1,4 +1,4 @@
-package handler
+package golang
 
 import (
     "log"
@@ -13,7 +13,7 @@ var url string = "http://localhost:8080"
 func HomePage(w http.ResponseWriter, r *http.Request) {
     if r.URL.Path != "/" {
         http.NotFound(w,r)
-        log.Println("[gfarms]: req HTTP/404 page not found","|",r.RemoteAddr)
+        log.Println("[gfarms]: req HTTP/404 page not found",r.URL.Path,"|",r.RemoteAddr)
         return
     }
 
