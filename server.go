@@ -11,7 +11,7 @@ func main() {
     mux := http.NewServeMux()    
     log.Println("[gfarms]: starting server on",url)
     //    
-    mux.Handle("/asset", http.StripPrefix("/asset", http.FileServer(http.Dir("asset"))))        
+    mux.Handle("/asset/", http.StripPrefix("/asset/", http.FileServer(http.Dir("asset"))))
     mux.Handle("/source/css/", http.StripPrefix("/source/css/", http.FileServer(http.Dir("source/css"))))
     mux.Handle("/source/js/", http.StripPrefix("/source/js/", http.FileServer(http.Dir("source/js"))))        
     //    
