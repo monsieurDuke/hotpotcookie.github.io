@@ -16,7 +16,9 @@ func main() {
     mux.Handle("/source/js/", http.StripPrefix("/source/js/", http.FileServer(http.Dir("source/js"))))        
     //    
     mux.HandleFunc("/",golang.HomePage)    
-    mux.HandleFunc("/dashboard",golang.DboardPage)    
+    mux.HandleFunc("/tutorial",golang.TutorialPage)
+    mux.HandleFunc("/article",golang.ArticlePage)    
+    mux.HandleFunc("/publication",golang.PublicationPage)    
     //
     err := http.ListenAndServe(":8080",mux)
     log.Fatal(err)
