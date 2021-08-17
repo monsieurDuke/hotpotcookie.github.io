@@ -31,8 +31,8 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
     log.Println("[gfarms]: req HTTP/1.1 "+url+"/","|",r.RemoteAddr)
 }
 
-func DboardPage(w http.ResponseWriter, r *http.Request) {
-    tmp,err := template.ParseFiles(path.Join("pages","dashboard.html"))
+func TutorialPage(w http.ResponseWriter, r *http.Request) {
+    tmp,err := template.ParseFiles(path.Join("tutorial","tutorial.html"))
     if err != nil {
         http.Error(w, err.Error(), http.StatusInternalServerError)
         log.Println("[gfarms]: req HTTP/"+strconv.Itoa(http.StatusInternalServerError),err,"|",r.RemoteAddr)
@@ -40,8 +40,8 @@ func DboardPage(w http.ResponseWriter, r *http.Request) {
     }
     err = tmp.Execute(w,nil)
     if err != nil {
-        log.Println("[gfarms]: req HTTP/"+strconv.Itoa(http.StatusInternalServerError),err,"|",r.RemoteAddr)        
+        log.Println("[gfarms]: req HTTP/"+strconv.Itoa(http.StatusInternalServerError),err,"|",r.RemoteAddr)
         return
     }    
-    log.Println("[gfarms]: req HTTP/1.1 "+url+"/dashboard","|",r.RemoteAddr)
+    log.Println("[gfarms]: req HTTP/1.1 "+url+"/tutorial","|",r.RemoteAddr)
 }
