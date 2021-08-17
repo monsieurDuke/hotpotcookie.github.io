@@ -14,7 +14,7 @@ html {
   --clr-pink: #FF8AB8;
   --clr-pink-light: #ffcfe2;
   --clr-pink-old: #c24a79;
-  --clr-green-old: #7ed9bc;
+  --clr-green-old: #66c4b5;
   --clr-cyan-old: #ab87e6;
   --clr-yellow-light: #f9ffa1;
   --clr-cyan-light: #b5c9ff;
@@ -64,12 +64,12 @@ body {
   padding: 10px;
 }
 .column.left {
-  width: 7%;
+  width: 5%;
   text-align: center;  
   background-color: var(--clr-white);
 }
 .column.right {
-  width: 93%;
+  width: 95%;
   text-align: center;
   background-color: var(--clr-white);
 }
@@ -85,8 +85,6 @@ body {
 .container {
   overflow: hidden;
   box-shadow: 0px 0px 0px 5px var(--clr-pink);  
-  background-image: url('../../asset/memphis-colorful.png');  
-  background-repeat: repeat-y;    
   text-align: center;
   border-radius: 0.05rem;
   position: relative;
@@ -94,6 +92,7 @@ body {
   margin-bottom: 2rem;
   margin-left: 2rem;
   height: 100%;
+  background-color: #faffde;
 }
 
 /* CARDS COMPONENT 
@@ -142,8 +141,12 @@ body {
 .scope .cyan {
   background-color: var(--clr-cyan-old);
 }
+.time {
+  margin: 0.5rem ;  
+  font-size: 0.9rem;  
+}
 .description {
-  margin: 1rem 2rem;
+  margin: 0.5rem 2rem;
   font-size: 0.9rem;
   height: 10em;
 }
@@ -216,6 +219,10 @@ body {
   padding-top: 2em;
   padding-bottom: 2em;    
 }
+.textbox.less {
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
 .textbox.less.one {
   background: url('../../asset/blob-2.svg');  
   background-repeat: no-repeat;
@@ -264,7 +271,7 @@ body {
 }
 .sidebar i {
   text-align: center;
-  font-size: 4em;
+  font-size: 3em;
   color: var(--clr-pink);
   margin-bottom: 0.15em;
   margin-top: 0.15em;
@@ -423,7 +430,7 @@ body {
     display: inline;
   }
   .topbar i {
-    font-size: 6.5vw;
+    font-size: 4.5vw;
     color: var(--clr-pink);
     margin-bottom: 0.15em;
     margin-top: 0.15em;
@@ -443,8 +450,6 @@ body {
   .container {
     overflow: hidden;
     box-shadow: 0px 0px 0px 5px var(--clr-pink);  
-    background-image: url('../../asset/memphis-colorful.png');  
-    background-repeat: repeat-y;    
     text-align: center;
     border-radius: 0.05rem;
     position: relative;
@@ -463,6 +468,9 @@ body {
   .name {
     font-size: 3.5vw;
   }
+  .time {
+    font-size: 1.8vw;    
+  }  
   .description {
     font-size: 1.8vw;
   }
@@ -490,8 +498,12 @@ body {
   }  
   .textbox.less {
     margin-bottom: 1.5em;
-    margin-top: 1em;
+    margin-top: 3em;
   }  
+  .textbox.less.sub {
+    margin-bottom: 1.5em;
+    margin-top: 8em;
+  }    
   .textbox.top {
     padding-top: 1em;
   }  
@@ -504,7 +516,7 @@ body {
   .footer {
     height: auto;
   }  
-  .footer-col h4 {
+  .footer-col .head {
     font-size: 1.5vw;
   }
   .footer-col.link ul {
@@ -556,8 +568,6 @@ body {
   .container {
     overflow: hidden;
     box-shadow: 0px 0px 0px 5px var(--clr-pink);  
-    background-image: url('../../asset/memphis-colorful.png');  
-    background-repeat: repeat-y;    
     text-align: center;
     border-radius: 0.05rem;
     position: relative;
@@ -573,7 +583,7 @@ body {
   .banner-img {
     position: absolute;
     opacity: 75%;  
-    height: 5vh;
+    height: 3vh;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -592,7 +602,7 @@ body {
     width: 3rem;
     clip-path: circle(10px at center);
     visibility: hidden;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
     padding: 0rem;
     height: 0;
   }
@@ -602,9 +612,12 @@ body {
   .scope {
   font-size: 2.5vw;
   }  
+  .time {
+    font-size: 2.4vw;    
+  }    
   .description {
     font-size: 2.4vw;
-    margin: 1em 0em 1em 0em;
+    margin: 0.5em 0em 1.5em 0em;
     padding: 0px 10px 0px 10px;
     height: auto;    
   }
