@@ -169,6 +169,28 @@ body {
   background-color: transparent;;  
   color: var(--clr-pink);
 }
+.syllabus {
+}
+.syllabus {
+  text-align: left;
+  padding: 0em 0.5em;
+  margin: 0.5rem 1rem 1rem 1rem;  
+}
+.syllabus ol li a {
+  text-decoration: none; 
+  color: var(--clr-pink-old);  
+  font-size: 0.9rem;  
+}
+.syllabus ol li {
+  list-style-type: none;  
+}
+.syllabus hr {
+  border: none;
+  height: 0.01em;
+  /* Set the hr color */
+  color: #333; /* old IE */
+  background-color: var(--clr-pink-old); /* Modern Browsers */
+}
 
 /* LOGO HEADER DIV
 ------------------ */
@@ -200,7 +222,8 @@ body {
 .textbox span {
   color: white;
   background-color: var(--clr-pink);
-  padding: 0px 7px 0px 7px;
+  padding: 1px 6px;
+  border-radius: 0.45em;
 }
 .textbox p {
   width: 65%;
@@ -355,6 +378,10 @@ body {
   width: 11rem;
   margin-top: 0.5vh;
 }
+.footer a img {
+  width: 1em;
+  margin-top: 0vh;  
+}
 .trademark {
   background: #961853;
   font-size: 0.75em;
@@ -432,27 +459,26 @@ body {
   .topbar {
     visibility: visible;
     position: fixed;
-    left: 50%;
     width: 100%;
-    transform: translate(-50%, 0%);
     background: white;
     background: var(--clr-pink);    
-    box-shadow: 0px 0px 0px 5px var(--clr-pink);   
     z-index: 1;   
-    padding: 0.1em 0em;
+    padding: 0.4em 0em;
+    top: 0;
+    left: 0;
+    right: 0;
   }
   .topbar li {
     display: inline;
   }
   .topbar i {
     font-size: 3em;
-    color: var(--clr-yellow-light);
+    color: #faffde;
     cursor: pointer;  
     margin: 0em 0.15em;
   }
-  .topbar li:first-child {
-  }
-  .topbar li:last-child {
+  .topbar i:hover {
+    color: var(--clr-yellow-light);
   }  
 
   /* CARDS CONTAINER 
@@ -483,6 +509,9 @@ body {
   }  
   .description {
     font-size: 1.8vw;
+  }
+  .syllabus ol li a {
+    font-size: 1.8vw;    
   }
   .btn {
     font-size: 2.3vw;
@@ -631,6 +660,9 @@ body {
     padding: 0px 10px 0px 10px;
     height: auto;    
   }
+  .syllabus ol li a {
+    font-size: 2.4vw;
+  }  
   .btn {
     font-size: 2.3vw;
     padding: 0.5em;
@@ -659,7 +691,7 @@ body {
   /* TOPBAR
   --------- */
   .topbar {
-    padding: 0em 0em;    
+    padding: 0.3em 0em;
   }  
   .topbar i {
     font-size: 1.8em;
