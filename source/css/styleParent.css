@@ -654,4 +654,14 @@ body {
   }  
   .trademark {
     margin-bottom: 0em;
+  }
+  
+  /* TOPBAR
+  --------- */
+  .topbar {
+    padding: 0em 0em;    
+  }  
+  .topbar i {
+    font-size: 1.8em;
+  }  
 }
