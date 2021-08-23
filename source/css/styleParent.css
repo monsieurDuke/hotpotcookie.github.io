@@ -2,6 +2,7 @@
 -------- */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&display=swap');
 
 /* ESSENTIALS 
 ------------- */
@@ -14,6 +15,7 @@ html {
   --clr-pink: #FF8AB8;
   --clr-pink-light: #ffcfe2;
   --clr-pink-old: #c24a79;
+  --clr-pink-ded: #72324b;
   --clr-green-old: #66c4b5;
   --clr-cyan-old: #ab87e6;
   --clr-yellow-light: #f9ffa1;
@@ -23,8 +25,6 @@ html {
 }
 * {
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
-  font-family: 'Poppins', sans-serif;  
   margin: 0;
   padding: 0;
 }
@@ -34,6 +34,7 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  font-family: 'Poppins', sans-serif;    
 }
 
 /* SCROLLBAR 
@@ -94,6 +95,56 @@ body {
   margin-left: 2rem;
   height: 100%;
   background-color: #faffde;
+}
+.container.content {
+  width: 80em;
+  padding: 2em 3.5em;
+  text-align: justify;
+  font-size: 1.3em;
+  box-shadow: 0px 0px 0px 0px;  
+  background-color: var(--clr-white); 
+  color: var(--clr-pink-ded);
+}
+.container.content .details {
+  font-family: 'Ubuntu', sans-serif;  
+  font-size: 1em;
+  color: var(--clr-pink-old);
+}
+.container.content .details .attribute {
+  margin-right: 0.5em;
+  margin-left: 0.1em;
+  color: var(--clr-pink);
+}
+.container.content .details a {
+  text-decoration: none;
+  color: var(--clr-cyan-old);
+  font-weight: bold;
+}
+.container.content .code {
+  padding: 4px 6px;
+  color: black;
+  border-radius: 0.3em;
+  width: 100%;
+  font-family: 'DM Mono', monospace;
+  margin: 0.8em 0em;
+  line-height: 1.2em;  
+}
+.container.content .code.command {
+  background-color: var(--clr-green-light);  
+}
+.container.content .code.file {
+  background-color: var(--clr-cyan-light);  
+}
+.container.content hr {
+  margin: 0.5em 0em 0.5em 0em;  
+  border: 0;
+  border-top: 0.01em solid var(--clr-pink-old);
+  display: block;
+  height: 0.01em;
+  /* Set the hr color */
+  color: #333; /* old IE */
+  background-color: var(--clr-pink-old); /* Modern Browsers */
+  clear: both;  
 }
 
 /* CARDS COMPONENT 
@@ -185,11 +236,14 @@ body {
   list-style-type: none;  
 }
 .syllabus hr {
-  border: none;
+  border: 0;
+  border-top: 0.01em solid var(--clr-pink-old);
+  display: block;
   height: 0.01em;
   /* Set the hr color */
   color: #333; /* old IE */
   background-color: var(--clr-pink-old); /* Modern Browsers */
+  clear: both;
 }
 
 /* LOGO HEADER DIV
@@ -270,7 +324,7 @@ body {
   background-size: 22em;   
 }
 .textbox.top span {
-  color: var(--clr-yellow-light);
+  color: var(--clr-white);
 }
 .textbox a:hover {
   color: var(--clr-yellow-light);
@@ -311,13 +365,11 @@ body {
   padding: 0em 0.3em;
   box-shadow: 0 5px 0px 0px var(--clr-pink), 0 -5px 0px 0px var(--clr-pink), 5px 5px 0px 0px var(--clr-pink), 5px -5px 0px 0px var(--clr-pink);  
   border-radius: 0em;
+  visibility: hidden;
 }
 
 .sidebar i:hover {
   color: var(--clr-pink);  
-}
-.sidebar p:hover {
-  opacity: 1;
 }
 .topbar {
   visibility: hidden;
@@ -368,11 +420,10 @@ body {
   font-size: 20px;
 }
 .footer .footer-col ul a:hover {
-  color: var(--color-yellow);
+  color: var(--color-white);
 }
 .footer .footer-col ul li a:hover {
-  padding-left: 3px;
-  color: var(--color-yellow);
+  color: var(--color-white);
 }
 .footer img{
   width: 11rem;
@@ -495,6 +546,9 @@ body {
     margin-right: 1em;
     height: 100%;
   }  
+  .container.content {
+    font-size: 1.8vw;
+  }
 
   /* CARDS COMPONENT
   ------------------ */
@@ -537,7 +591,7 @@ body {
   }  
   .textbox.less {
     margin-bottom: 1.5em;
-    margin-top: 3em;
+    margin-top: 5em;
   }  
   .textbox.less.sub {
     margin-bottom: 1.5em;
