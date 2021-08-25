@@ -48,26 +48,192 @@
 						<div class="details">
 							<h1>PUBLICATIONS</h1>
 							<div class="top-details"><p class="scope"><span class="pink">PVP</span> <span class="green">Threading</span> <span class="cyan">Java</span> <span class="cyan">MySQL</span></p></div>							
-							<span class="attribute"><i class="fas fa-user"></i></span><span class="key"><a href="https://github.com/aster-max" target="_blank" rel="noopener noreferrer">@aster-max</a>  Muhammad Nur Irsyad</span><br>
-							<span class="attribute"><i class="far fa-clock"></i></span><span class="key">Updated on <strong>August 30, 2021</strong> • Originally Published on <strong>August 23, 2021</strong></span>
+							<div class="bot-details"><span class="attribute"><i class="fas fa-user"></i></span><span class="key"><a href="https://github.com/aster-max" target="_blank" rel="noopener noreferrer">@aster-max</a>  Muhammad Nur Irsyad</span><br></div>
+							<div class="bot-details"><span class="attribute"><i class="far fa-clock"></i></span><span class="key">Updated on <strong>August 30, 2021</strong> • Originally Published on <strong>August 23, 2021</strong></span></div>
 						</div>
 						<hr>						
 
-						<div class="body">
-							<div class="pub-header">
-								<h1>
-									Perancangan Game LAN-based Multiplayer<br>
-									berbasis Java dengan menggunakan<br>
-									Multithreading
-								</h1>
-								<p>
-									<strong>Fauzan Nugroho, Muhammad Fabian Anshor, Muhammad Nur Irsyad</strong><br>
-									Teknik Multimedia dan Jaringan, Teknik Informatika dan Komputer, Politeknik Negeri Jakarta<br>
-									Jl. Prof. DR. G.A. Siwabessy, Kukusan, Kecamatan Beji, Kota Depok, Jawa Barat 16424<br>
-									Telp: (021) 7270036 / Fax: (021) 7270034<br>
-									Email: <a href="mailto:akademik@pnj.ac.id">akademik@pnj.ac.id</a>
-								</p>
+						<div class="pub-header">
+							<h1>
+								Perancangan Game LAN-based Multiplayer<br>
+								berbasis Java dengan menggunakan<br>
+								Multithreading
+							</h1>
+							<p>
+								<strong>Fauzan Nugroho, Muhammad Fabian Anshor, Muhammad Nur Irsyad</strong><br>
+								Teknik Multimedia dan Jaringan, Teknik Informatika dan Komputer, Politeknik Negeri Jakarta<br>
+								Jl. Prof. DR. G.A. Siwabessy, Kukusan, Kecamatan Beji, Kota Depok, Jawa Barat 16424<br>
+								Telp: (021) 7270036 / Fax: (021) 7270034<br>
+								Email: <a href="mailto:akademik@pnj.ac.id">akademik@pnj.ac.id</a>
+							</p>
+						</div>
+						<div class="body">							
+							<p><em>
+								Abstract - Sbinning Sgill is a desktop-based game that adopts the concept of a monopoly game, which is then packaged in a
+								battle between players (PVP) format. In this case, the author wants to explain how the front-end and back-end components
+								are integrated into the game. The game application applies the concept of object-oriented programming and uses database
+								connectivity through MySQL in connecting players to play together at the same time on a LAN scale. The use of
+								Multithreading is also implemented to be able to perform various features/actions at the same time, such as the chat lobby
+								feature, as well as animating enemy player movements in the other player interface. The purpose of making this game
+								application is to build a good sense of competitiveness that is packaged in a user-friendly and performance-oriented form.
+								The game application is built in Java 8 using the Apache Netbeans 10 IDE, so it can run on any major OS platform, such as
+								Unix and Windows-based.
+								<br><br>
+								Keywords: Sbinning Sgill, LAN-Based Multiplayer, Multithreading, PVP, Java
+							</em></p>
+							<p>
+								Abstrak - Sbinning Sgill merupakan permainan berbasiskan desktop yang mengadopsi konsep dari permainan monopoli, yang
+								kemudian dikemas dalam format pertarungan antar pemain (PVP). Dalam hal ini penulis ingin menjelaskan bagaimana
+								komponen front-end dan juga back-end diintegrasikan ke dalam permainan. Aplikasi permainan menerapkan konsep
+								pemrograman berbasiskan objek, serta menggunakan konektivitas database melalui MySQL dalam menghubungkan antar
+								pemain untuk bermain bersama dalam waktu yang bersamaan dalam skala LAN. Penggunaan Multithreading pun
+								diimplementasikan untuk dapat melakukan berbagai fitur / aksi dalam satu waktu, seperti fitur chat lobby, serta
+								menganimasikan gerakan pemain musuh dalam interface pemain yang satunya. Tujuan dari pembuatan aplikasi permainan ini
+								adalah untuk menumbuhkan rasa kompetitif yang baik yang dikemas dalam bentuk user-friendly dan performance-oriented.
+								Adapun aplikasi permainan ini dibangun dalam bahasa Java 8 menggunakan IDE Apache Netbeans 10, sehingga dapat
+								dijalankan dalam platform OS secara umum, seperti berbasiskan Unix dan Windows.
+								<br><br>
+								Kata kunci: Sbinning Sgill, Multiplayer berbasis LAN, Multithreading, PVP, Java
+							</p>
+							<hr>
+							<div class="content-row">
+								<div class="content-col">
+									<h3>I. PENDAHULUAN</h3>
+									<h4>1.1<span>Latar Belakang</span></h4>									
+									<p class="indent">
+										Salah satu bukti berkembangnya teknologi
+										dan informasi yang pesat dapat dilihat dari
+										bagaimana sebuah aplikasi permainan itu dibangun.
+										Anak pun ikut dalam perkembangan zaman yang
+										dimana paradigma mengenai permainan itu berubah
+										pula. Selain dapat memenuhi ruang kosong,
+										permainan dapat dimanfaatkan individu dalam
+										bermain bersama untuk mendapatkan kesenangan,
+										kegembiraan, serta mengembangkan sisi emosional,
+										intelektual, serta kompetitif dari individu <a href="#" class="reference">[1]</a>.									
+									</p>
+									<p class="indent">
+										Dengan mengedepankan kemasan yang
+										user-friendly, maka diharapkan aplikasi dapat
+										Adapun aplikasi dirancang untuk dimainkan
+										dalam skala LAN, yang dikhususkan untuk para
+										pemain dalam membangun sebuah hubungan sosial
+										yang lebih erat dengan media hiburan yang juga
+										kompetitif <a href="#" class="reference">[2]</a>.																				digunakan dengan segmentasi pemain yang lebih luas.
+									</p>
+									<p class="indent">
+										Disediakannya fasilitas permainan yang
+										dibangun khusus untuk membentuk interaksi sosial
+										yang sehat, diharapkan dapat mempengaruhi ruang
+										sosial serta reaksi antar individu untuk membangun
+										gaya hidup yang lebih kompetitif dan supportif,
+										minimal dalam skala terkecil layaknya teman sebaya
+										ataupun komunitas <a href="#" class="reference">[3]</a>.
+									</p>																		
+									<p class="indent">
+										Dalam menyediakan aplikasi permainan yang
+										responsif untuk kedua buah layar pemain, maka
+										aplikasi dibangun dengan menggunakan
+										multithreading dalam melayani data pada back-end
+										nya. —
+									</p> 
+								</div>								
+								<div class="content-col">
+									<p class="continue">Hal ini pun juga yang mendasari untuk program
+										dibangun dalam bahasa Java, karena environment
+										nya yang mendukung untuk melakukan
+										multi-tasking tersebut. Karena aplikasi layaknya
+										digunakan untuk pemakaian secara simultan, maka
+										pengendalian sub-task didalamnya dapat
+										mempermudah aplikasi untuk memiliki interaksi
+										yang lebih responsif dengan latensi yang lebih
+										rendah <a href="#" class="reference">[4]</a>.
+									</p>																		
+									<p class="indent">
+										Agar data pemain serta data dari permainan
+										yang sedang berlangsung dapat didistribusikan
+										dengan baik, maka dibutuhkannya database design
+										dalam perancangannya. Setelah sudah mendapatkan
+										blueprint dari bagaimana database akan dibangun,
+										maka proses perancangan back-end akan menjadi
+										lebih mudah. Selain itu, proses perancangan
+										database yang baik pun akan memudahkan front-end
+										untuk mengolah data yang ada secara efisien untuk
+										mempercepat proses/aksi yang seharusnya
+										berlangsung di waktu yang bersamaan <a href="#" class="reference">[5]</a>.										
+									</p>									
+									<p class="indent">
+										Pembuatan aplikasi ini juga dilengkapi
+										dengan fitur chat lobby, yang dapat digunakan oleh
+										internal antara para pemain. Disediakannya fitur ini
+										merupakan rangka untuk menghidupkan landasan
+										dari dibuatnya aplikasi ini, yaitu menghidupkan
+										environment yang baik dengan adanya dukungan
+										platform untuk interaksi sosial. Dengan landasan
+										tersebut, maka penulis memiliki gagasan untuk
+										merancang aplikasi permainan dengan menonjolkan
+										sisi interaktif sosial yang bersifat kompetitif dan
+										supportif di satu waktu.										
+									</p>																		
+								</div>																
 							</div>
+							<hr>
+
+							<div class="content-row">
+								<div class="content-col">
+									<h3>II. KERANGKA TEORI</h3>
+									<h4>2.1<span>Database</span></h4>									
+									<p class="indent">
+										Database adalah kumpulan informasi yang
+										disimpan di dalam komputer secara sistematik
+										sehingga dapat diperiksa menggunakan suatu
+										program komputer untuk memperoleh informasi dari
+										basis data tersebut. Database adalah representasi
+										kumpulan fakta yang saling berhubungan disimpan
+										secara bersama sedemikian rupa dan tanpa
+										pengulangan (redudansi) yang tidak perlu, untuk
+										memenuhi berbagai kebutuhan. Database merupakan
+										sekumpulan informasi yang saling berkaitan pada
+										suatu subjek tertentu pada tujuan tertentu pula.
+										Database adalah susunan record data operasional
+										lengkap dari suatu organisasi atau perusahaan, yang
+
+										diorganisir dan disimpan secara terintegrasi dengan
+										menggunakan metode tertentu dalam komputer
+										sehingga mampu memenuhi informasi yang optimal
+										yang dibutuhkan oleh para pengguna. Kelebihan
+										Database Oracle.
+									</p>
+									<p class="indent">
+										Dengan mengedepankan kemasan yang
+										user-friendly, maka diharapkan aplikasi dapat
+										digunakan dengan segmentasi pemain yang lebih										
+									</p>
+								</div>								
+								<div class="content-col">
+									<p class="continue">
+										luas. Adapun aplikasi dirancang untuk dimainkan
+										dalam skala LAN, yang dikhususkan untuk para
+										pemain dalam membangun sebuah hubungan sosial
+										yang lebih erat dengan media hiburan yang juga
+										kompetitif <a href="#" class="reference">[2]</a>.										
+									</p>
+									<p class="indent">
+										Disediakannya fasilitas permainan yang
+										dibangun khusus untuk membentuk interaksi sosial
+										yang sehat, diharapkan dapat mempengaruhi ruang
+										sosial serta reaksi antar individu untuk membangun
+										gaya hidup yang lebih kompetitif dan supportif,
+										minimal dalam skala terkecil layaknya teman sebaya
+										ataupun komunitas <a href="#" class="reference">[3]</a>.
+									</p>									
+									<p class="indent">
+										Dalam menyediakan aplikasi permainan yang
+										responsif untuk kedua buah layar pemain, maka
+										aplikasi dibangun dengan menggunakan multithreading dalam
+									</p>
+								</div>																
+							</div>							
 						</div>
 					</div>
 				</div>				
