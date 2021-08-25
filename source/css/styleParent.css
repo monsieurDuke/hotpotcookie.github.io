@@ -159,6 +159,9 @@ body {
   background-color: var(--clr-pink-old); /* Modern Browsers */
   clear: both;  
 }
+.container.content .body {
+  margin-bottom: 2em;
+}
 .container.content .paging {
   margin-top: 1em;
   text-align: center;  
@@ -178,16 +181,53 @@ body {
   font-family: "Times New Roman", Times, serif;  
 }
 .container.content.pub .body {
-  font-size: 1.6vw;
+  font-size: 1em;
+}
+.container.content.pub .body p {
+  margin-bottom: 2em;
 }
 .container.content .pub-header {
   text-align: center;
+  margin-bottom: 1em;
 }
 .container.content .pub-header h1{
   padding-bottom: 1em;
 }
 .container.content.pub a {
   text-decoration: none;
+}
+.container.content .details .bot-details {
+  margin-top: 0.15em;
+}
+.container.content.pub .body .content-row {
+  display: flex;
+  gap: 1em;
+}
+.container.content.pub .body .content-col {
+  flex: 50%;
+}
+.container.content.pub .body .content-col h3 {
+  text-align: center;
+  margin-bottom: 0.87em;
+}
+.container.content.pub .body .content-col h4 {
+  margin-bottom: 0.3em;  
+}
+.container.content.pub .body .content-col h4 span {
+  padding-left: 1.24em;
+}
+.container.content.pub .body .content-col .indent {
+  text-indent: 2.5em;
+  margin-bottom: 0.5em;
+}
+.container.content.pub .body .content-col .continue {
+  text-indent: 0em;
+  margin-bottom: 0.5em;
+}
+.container.content.pub .body .content-col .reference {
+  font-size: 0.8em;
+  color: var(--clr-pink-old);
+  font-weight: bold;
 }
 /* CARDS COMPONENT 
 ------------------ */
@@ -489,6 +529,11 @@ body {
 
 /* RESPONSIVENESS
 ----------------- */
+@media(max-width: 950px) {
+  .container.content.pub .body, .container.content.pub .pub-header {
+    font-size: 0.7em;
+  }  
+}
 @media(max-width: 690px) {
   /* FOOTER
   -------------- */
@@ -591,9 +636,12 @@ body {
   }  
   .container.content {
     font-size: 2vw;
-    padding: 2em 0em;
+    padding: 0em 0em;
+    margin: 0em 1em;
   } 
-
+  .container.content.pub .body, .container.content.pub .pub-header{
+    font-size: 1.9vw;
+  }  
   /* CARDS COMPONENT
   ------------------ */
   .scope {
@@ -657,7 +705,7 @@ body {
     font-size: 1.5vw;
   }
   .footer-col.link ul {
-    line-height: 75%;
+    line-height: 100%;
   }  
   .footer-col.link ul li a {
     font-size: 1.3vw;
@@ -685,7 +733,7 @@ body {
 
 @media(max-width: 375px) {
   body {
-    background-color: var(--clr-pink);
+    background-color: var(--clr-white);
   }
   /* LOGO HEADER DIV
   ------------------ */  
@@ -714,7 +762,6 @@ body {
     margin-right: 0.8em;
     height: 100%;
   }      
-
   /* CARDS COMPONENT 
   ------------------ */
   .banner-img {
