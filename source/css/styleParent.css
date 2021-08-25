@@ -213,8 +213,18 @@ body {
 .container.content.pub .body .content-col h4 {
   margin-bottom: 0.3em;  
 }
-.container.content.pub .body .content-col h4 span {
+.container.content.pub .body .content-col .bullet {
   padding-left: 1.24em;
+  font-weight: bold;
+}
+.container.content.pub .body .content-col .sym-bullet {
+  padding-left: 2.5em;
+  font-weight: bold;  
+}
+.container.content.pub .body .content-col .sub-bullet{
+  margin-left: 2.5em;
+  margin-top: 0.3em;
+  margin-bottom: 1em;
 }
 .container.content.pub .body .content-col .indent {
   text-indent: 2.5em;
@@ -223,6 +233,14 @@ body {
 .container.content.pub .body .content-col .continue {
   text-indent: 0em;
   margin-bottom: 0.5em;
+}
+.container.content.pub .body .content-col .continue-bullet {
+  text-indent: 0em;
+  margin-bottom: 0em;
+}
+.container.content.pub .body .content-col .continue-bullet .sym-bullet {
+  text-indent: 2.5em;  
+  margin-bottom: 0em;
 }
 .container.content.pub .body .content-col .reference {
   font-size: 0.8em;
