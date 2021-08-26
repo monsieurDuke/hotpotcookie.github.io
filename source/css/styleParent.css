@@ -184,7 +184,7 @@ body {
   font-size: 1em;
 }
 .container.content.pub .body p {
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .container.content .pub-header {
   text-align: center;
@@ -211,11 +211,13 @@ body {
   margin-bottom: 0.87em;
 }
 .container.content.pub .body .content-col h4 {
-  margin-bottom: 0.3em;  
+  margin-bottom: 0.3em; 
+  margin-top: 0em; 
 }
 .container.content.pub .body .content-col .bullet {
   padding-left: 1.24em;
   font-weight: bold;
+  margin-top: 0em;
 }
 .container.content.pub .body .content-col .sym-bullet {
   padding-left: 2.5em;
@@ -224,7 +226,7 @@ body {
 .container.content.pub .body .content-col .sub-bullet{
   margin-left: 2.5em;
   margin-top: 0.3em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 .container.content.pub .body .content-col .indent {
   text-indent: 2.5em;
@@ -233,6 +235,9 @@ body {
 .container.content.pub .body .content-col .continue {
   text-indent: 0em;
   margin-bottom: 0.5em;
+}
+.container.content.pub .body .content-col .continue.not-bullet {
+  margin-bottom: 1em;
 }
 .container.content.pub .body .content-col .continue-bullet {
   text-indent: 0em;
@@ -247,6 +252,7 @@ body {
   color: var(--clr-pink-old);
   font-weight: bold;
 }
+
 /* CARDS COMPONENT 
 ------------------ */
 .banner-img {
@@ -430,6 +436,7 @@ body {
 .textbox a:hover {
   color: var(--clr-yellow-light);
 }
+
 /* SIDE NAVBAR
 -------------- */
 .sidebar {
