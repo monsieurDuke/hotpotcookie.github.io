@@ -3,6 +3,7 @@
 	window.onload = init;
 	function init(){
 		// Button Path Marker
+		// ------------------
 		const cyan_old = "#ab87e6";
 		const pink = "#FF8AB8";
 		const white = "#FFF";
@@ -39,6 +40,9 @@
 			case current_URL.indexOf("publication") !== -1:
 				idx_navbutton = 3;
 				break;
+			case current_URL.indexOf("profile") !== -1:
+				idx_navbutton = 4;
+				break;
 			default:
 				idx_navbutton = 0;
 				break;		
@@ -53,7 +57,20 @@
 				topnav_button[i].style.color = yellow;				
 				console.log(i+" yes");				
 			}
-		}
+		}		
 	}
-
 })(window, document, undefined);
+
+function toggleDesc(x) {
+	let arr = x.id.split("-");
+	key_class = "text-"+arr[1];	
+	if (x.className.includes("up")) {
+		x.className = x.className.replace("up","down");
+		document.getElementById(key_class).style.display = 'flex';
+	} else {
+		console.log(x.className);
+		x.className = x.className.replace("down","up");
+		document.getElementById(key_class).style.display = 'none';		
+	}
+}
+
