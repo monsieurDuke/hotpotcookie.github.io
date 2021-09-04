@@ -43,6 +43,9 @@
 			case current_URL.indexOf("profile") !== -1:
 				idx_navbutton = 4;
 				break;
+			case current_URL.indexOf("privacy-policy") !== -1:
+				idx_navbutton = -1;
+				break;				
 			default:
 				idx_navbutton = 0;
 				break;		
