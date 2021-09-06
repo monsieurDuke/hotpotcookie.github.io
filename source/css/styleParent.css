@@ -329,8 +329,8 @@ body {
 }
 .btn {
   width: 100%;
-  border: 1px solid var(--clr-pink);
-  font-size: 1rem;
+  border: 1px solid transparent;
+  font-size: 1.1rem;
   font-weight: bold;
   color: white;
   padding: 1rem;
@@ -338,11 +338,12 @@ body {
   cursor: pointer;
   margin-top: auto;
   font-family: 'Poppins', sans-serif;    
+  transition: 0.3s;
+  border-radius: 0;
 }
 .btn:hover {
   opacity: 1;
-  border: 1px solid transparent;  
-  background-color: transparent;;  
+  background-color: #faffde;;  
   color: var(--clr-pink);
 }
 .syllabus {
@@ -415,6 +416,7 @@ body {
 .textbox a {
   text-decoration: none;  
   color: white;
+  transition: 0.3s;
 }
 .textbox span {
   color: white;
@@ -572,6 +574,7 @@ body {
   text-decoration: none;
   color: white;
   font-size: 10px;
+  transition: 0.3s;
 }
 .footer .footer-col.media a {
   font-size: 20px;
